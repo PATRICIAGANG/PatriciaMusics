@@ -44,7 +44,7 @@ class Downloader(metaclass=Singleton):
                 # 'outtmpl': f'{self.root}{fileName}.*',
                 # 'postprocessors': [{
                 #     'key': 'FFmpegExtractAudio',
-                #     'preferredcodec': 'mp4',
+                #     'preferredcodec': 'mp3',
                 #     'preferredquality': '320'
                 # }],
                 # 'noplaylist': True
@@ -52,7 +52,7 @@ class Downloader(metaclass=Singleton):
 
             with youtube_dl.YoutubeDL(options) as ydl:
                 # mp3.download([songUrl])
-                info_dict = ydl.extract_info(songUrl, download=False)
+                info_dict = ydl.extract_info(songUrl, download=True)
                 audio_file = ydl.prepare_filename(info_dict)
                 ydl.process_info(info_dict)
             if audio_file is None:
