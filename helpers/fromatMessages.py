@@ -37,7 +37,7 @@ def getMessage(message, action):
                 f"\n• **/adminmode on|off : ** __Turning this on makes the bot actions available only to bot admins.__"
             helpMessage = helpMessage + \
                 f"\n• **/loop [2-5]|off : ** __Loop the playback [x] times(x is between 2-5) / Turn off the loop playback.__"
-            helpMessage = helpMessage + f"\n\n**__For any issues contact @voicechatsupport__**"
+            helpMessage = helpMessage + f"\n\n**__For any issues contact @patricia_support__**"
             return helpMessage, getReplyKeyBoard(message, action)
 
         elif action == "chat-not-allowed":
