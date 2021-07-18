@@ -19,7 +19,7 @@ class Downloader(metaclass=Singleton):
         self.root = "songs//"
 
     def transcode(self, fileName, extension):
-        inpFileName = f"{self.root}{fileName}.{extension}"
+        inpFileName = f"{fileName}.{extension}"
         ffmpeg.input(inpFileName).output(
             f"{self.root}{fileName}.raw",
             format="s16le",
@@ -41,7 +41,7 @@ class Downloader(metaclass=Singleton):
                 # PERMANENT options
                 'format': 'bestaudio/best',
                 # 'keepvideo': False,
-                # 'outtmpl': f'{self.root}{fileName}.*',
+                # 'outtmpl': f'{fileName}.*',
                 # 'postprocessors': [{
                 #     'key': 'FFmpegExtractAudio',
                 #     'preferredcodec': 'mp3',
@@ -57,7 +57,7 @@ class Downloader(metaclass=Singleton):
                 ydl.process_info(info_dict)
             if audio_file is None:
                 return None
-            os.rename(audio_file,  f"{self.root}{fileName}.{extension}")
+            os.rename(audio_file,  f"{fileName}.{extension}")
 
             loop = asyncio.get_running_loop()
             await loop.run_in_executor(
