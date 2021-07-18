@@ -21,7 +21,7 @@ class Downloader(metaclass=Singleton):
     def transcode(self, fileName, extension):
         inpFileName = f"{fileName}.{extension}"
         ffmpeg.input(inpFileName).output(
-            f"{self.root}{fileName}.raw",
+            f"{fileName}.raw",
             format="s16le",
             acodec="pcm_s16le",
             ac=2,
