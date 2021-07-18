@@ -52,7 +52,7 @@ class Downloader(metaclass=Singleton):
 
             with youtube_dl.YoutubeDL(options) as ydl:
                 # mp3.download([songUrl])
-                info_dict = ydl.extract_info(songUrl, download=True)
+                info_dict = ydl.extract_info(songUrl, download=False)
                 audio_file = ydl.prepare_filename(info_dict)
                 ydl.process_info(info_dict)
             if audio_file is None:
