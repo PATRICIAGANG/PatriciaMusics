@@ -6,7 +6,7 @@ from helpers.decorators import chat_allowed, delayDelete, admin_mode_check
 from utils.Logger import *
 
 
-@Client.on_message(filters.command(['stop', 'stop@vcplayerbot']) & ~filters.edited & ~filters.bot)
+@Client.on_message(filters.command(['stop', 'stop@ERAGANGMUSICBOT']) & ~filters.edited & ~filters.bot)
 @chat_allowed
 @admin_mode_check
 async def stop(client, message, current_client):
