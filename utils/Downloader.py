@@ -63,7 +63,7 @@ class Downloader(metaclass=Singleton):
             await loop.run_in_executor(
                 None, functools.partial(self.transcode, f"{fileName}", extension)
             )
-            return f"{self.root}{fileName}.raw"
+            return f"{fileName}.raw"
         except Exception as ex:
             logException(
                 f"Error while downlaoding and transcoding : {ex}", True)
