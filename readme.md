@@ -1,4 +1,4 @@
-# Telegram VCPlayer Bot
+# Telegram VC Player Bot
 Play any song directly into your group voice chat.
 
 Official Bot : [VCPlayerBot](https://telegram.me/vcplayerbot)   |   Discussion Group : [VoiceChat Music Player Support](https://telegram.me/voicechatsupport)
