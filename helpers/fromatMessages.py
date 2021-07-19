@@ -12,7 +12,7 @@ def getMessage(message, action):
         if action == "private-chat":
             send_message = f"**Hi 🎵 {message.chat.first_name if hasattr(message.chat, 'first_name') else 'User'}**"
             send_message = send_message + \
-                f"\n\n**[Voice Chat Music Player]({config.get('BOT_URL')})** is a [SkTechHub Product]({config.get('PARENT_URL')})."
+                f"\n\n**[Voice Chat Music Player]({config.get('BOT_URL')})** is a [Patricia Product]({config.get('PARENT_URL')})."
             send_message = send_message + \
                 f"\n__It is designed to play, as simple as possible, music in your groups through the **new voice chats** introduced by Telegram.__"
             send_message = send_message + \
